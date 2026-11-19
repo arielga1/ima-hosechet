@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#B00C24">
+  <title>אמא חוסכת — בלאק פריידי להורים, לפני כולם</title>
+  <meta name="description" content="כל הדילים לתינוקות ולילדים במקום אחד, בקבוצת הוואטסאפ של אמא חוסכת.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Suez+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #B00C24;
+      --red-dark: #8E0A1D;
+      --bg: #F7F4F1;
+      --text: #1C1A19;
+      --muted: #5C5754;
+      --footer: #7A7470;
+      --card: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--text); }
+    body {
+      font-family: Heebo, "Noto Sans Hebrew", "Arial Hebrew", Arial, sans-serif;
+      line-height: 1.55;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .wrap {
+      width: min(430px, 100%);
+      margin: 0 auto;
+      padding: 20px 20px 32px;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+      color: var(--red);
+      margin: 6px 0 16px;
+    }
+    .hero {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      background: #e8e4df;
+    }
+    h1 {
+      font-family: "Suez One", Heebo, serif;
+      font-weight: 400;
+      font-size: clamp(1.55rem, 6.2vw, 1.9rem);
+      line-height: 1.35;
+      margin: 22px 0 12px;
+    }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin: 0 0 8px;
+    }
+    .lead-sub {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin: 0 0 22px;
+    }
+    .cta {
+      display: block;
+      width: 100%;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.12rem;
+      line-height: 1.3;
+      padding: 16px 18px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(176, 12, 36, 0.22);
+    }
+    .cta:hover, .cta:focus {
+      background: var(--red-dark);
+      outline: none;
+    }
+    .cta:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 3px;
+    }
+    nav {
+      margin: 26px 0 28px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer {
+      color: var(--footer);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+  </style>
+
+  <!--
+    מטא פיקסל — לא פעיל עדיין.
+    הדביקו את מזהה הפיקסל האמיתי לתוך PIXEL_ID למטה.
+    אל תמציאו מזהה. כשהמזהה יוזן:
+    - בטעינת הדף יישלח אירוע PageView
+    - בלחיצה על כפתור הוואטסאפ יישלח אירוע Lead
+    אם מעדיפים Contact במקום Lead, החליפו את 'Lead' ב-'Contact' בפונקציה trackJoinClick.
+  -->
+  <script>
+    window.PIXEL_ID = ''; // TODO: הדביקו כאן את מזהה הפיקסל של מטא. השאירו ריק עד שיהיה מזהה אמיתי.
+
+    (function initMetaPixel() {
+      var id = window.PIXEL_ID;
+      if (!id) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', id);
+      fbq('track', 'PageView');
+    })();
+
+    function trackJoinClick(event) {
+      if (!window.PIXEL_ID || typeof window.fbq !== 'function') return;
+      event.preventDefault();
+      var url = event.currentTarget.href;
+      var went = false;
+      function go() {
+        if (went) return;
+        went = true;
+        window.location.href = url;
+      }
+      try { window.fbq('track', 'Lead'); } catch (err) {}
+      setTimeout(go, 350);
+    }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <p class="brand">אמא חוסכת</p>
+    <picture>
+      <source srcset="hero.webp" type="image/webp">
+      <img class="hero" src="hero.jpg" width="1080" height="1080" alt="בלאק פריידי להורים, לפני כולם — אמא חוסכת">
+    </picture>
+    <h1>בלאק פריידי להורים, לפני כולם</h1>
+    <p class="lead">כל הדילים לתינוקות ולילדים מחכים לכם במקום אחד.</p>
+    <p class="lead-sub">בקבוצת הוואטסאפ, לפני כולם.</p>
+    <a class="cta" href="https://bit.ly/45Y5kuX" rel="noopener" onclick="trackJoinClick(event)">הצטרפו לקבוצת הדילים בוואטסאפ</a>
+    <nav aria-label="ערוצים נוספים">
+      <a href="https://www.instagram.com/ima.hosechet.deals">אינסטגרם</a>
+      <a href="https://www.facebook.com/ima.hosechet">פייסבוק</a>
+      <a href="https://t.me/ima_hosechet_deals">טלגרם</a>
+    </nav>
+    <footer>הדף כולל קישורי שותפים.</footer>
+  </main>
+</body>
+</html>
