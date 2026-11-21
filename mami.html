@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#B00C24">
+  <title>אמא חוסכת — המלצות והטבות במאמי</title>
+  <meta name="description" content="הטבות נבחרות במאמי לתינוקות, לילדים ולהורים, שריכזנו בשבילכם באמא חוסכת.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Suez+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #B00C24;
+      --red-dark: #8E0A1D;
+      --bg: #F7F4F1;
+      --text: #1C1A19;
+      --muted: #5C5754;
+      --footer: #7A7470;
+      --card: #FFFFFF;
+      --blush: #F8E8EA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--text); }
+    body {
+      font-family: Heebo, "Noto Sans Hebrew", "Arial Hebrew", Arial, sans-serif;
+      line-height: 1.55;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .wrap {
+      width: min(430px, 100%);
+      margin: 0 auto;
+      padding: 20px 20px 32px;
+    }
+    @media (min-width: 760px) {
+      .wrap { width: min(860px, 100%); padding: 28px 24px 40px; }
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+      color: var(--red);
+      margin: 6px 0 10px;
+    }
+    h1 {
+      font-family: "Suez One", Heebo, serif;
+      font-weight: 400;
+      font-size: clamp(1.55rem, 5.4vw, 1.9rem);
+      line-height: 1.35;
+      margin: 8px 0 12px;
+    }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin: 0 0 8px;
+    }
+    .lead-sub {
+      font-size: 1.02rem;
+      color: var(--text);
+      margin: 0 0 12px;
+    }
+    .disclosure {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 0 0 28px;
+      text-align: right;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 6px 18px rgba(28, 26, 25, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 10px;
+    }
+    .icon {
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--blush);
+      color: var(--red);
+      font-family: "Suez One", Heebo, serif;
+      font-size: 1.45rem;
+      line-height: 48px;
+      text-align: center;
+    }
+    .emoji {
+      font-style: normal;
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+      font-size: 0.95rem;
+      margin-inline-start: 6px;
+      vertical-align: middle;
+    }
+    .card h2 {
+      font-family: Heebo, sans-serif;
+      font-weight: 800;
+      font-size: 1.18rem;
+      line-height: 1.3;
+      color: var(--text);
+    }
+    .deal {
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 0 0 8px;
+    }
+    .expiry {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .btn, .cta {
+      display: block;
+      width: 100%;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.12rem;
+      line-height: 1.3;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(176, 12, 36, 0.22);
+    }
+    .btn { margin-top: auto; font-size: 1.05rem; padding: 13px 18px; }
+    .btn:hover, .btn:focus,
+    .cta:hover, .cta:focus {
+      background: var(--red-dark);
+      outline: none;
+    }
+    .btn:focus-visible, .cta:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 3px;
+    }
+    .join {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px 18px 20px;
+      box-shadow: 0 6px 18px rgba(28, 26, 25, 0.06);
+      margin: 0 0 26px;
+    }
+    .join p {
+      font-size: 1.05rem;
+      margin: 0 0 16px;
+    }
+    nav {
+      margin: 0 0 22px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer {
+      color: var(--footer);
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+    footer p + p { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="brand">אמא חוסכת</p>
+    <h1>המלצות והטבות במאמי</h1>
+    <p class="lead">אספנו בשבילכם הטבות נבחרות במאמי, לתינוקות, לילדים ולהורים.</p>
+    <p class="lead-sub">למימוש ההטבה במאמי.</p>
+    <p class="disclosure">הקישורים בעמוד הם <bdi dir="rtl">#לינק_מתגמל</bdi></p>
+
+    <section class="grid" aria-label="הטבות נבחרות">
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">נ</span>
+          <h2>נושקי <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">30% הנחה + 5% אקסטרה</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fnushkikids%3FcampaignId%3Df9bc5cec-967e-4344-82bb-dd78e39a0bfa" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ס</span>
+          <h2>ספפי <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">25% הנחה באתר</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fsapappy%3FcampaignId%3D1cfaa4b7-80a6-4631-9d9e-801907bdec2e" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ב</span>
+          <h2>בוטאו <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">עד 45% הנחה באתר</p>
+        <p class="expiry">בתוקף עד 1.12</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fbotao%3FcampaignId%3De127b8d3-ce03-420c-96b0-961f79546108" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ב</span>
+          <h2>ביוגאיה <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">15% הנחה על טיפות ביוגאיה</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fbiogaia%3FcampaignId%3D275711f6-978e-4ac7-ba2a-56771898e8ff" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">פ</span>
+          <h2>פונפוני <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">23% הנחה על כל האתר והחנויות</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fponponi%3FcampaignId%3Db29efbf6-7493-4d10-a523-5dbf021ae453" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">א</span>
+          <h2>אנבלה <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">20% הנחה על כל האתר</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fannabella%3FcampaignId%3D1bb29337-d6b0-476d-a1de-00ff482be3e9" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ב</span>
+          <h2>בליס <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">12% הנחה + מתנה</p>
+        <p class="expiry">בתוקף עד 31.12</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fbliss%3FcampaignId%3D4aee0bc8-43fd-4883-8020-9d362618bfff" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">פ</span>
+          <h2>פמילי בוקס <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">20% הנחה</p>
+        <p class="expiry">בתוקף עד 30.11</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Ffamilybox%3FcampaignId%3D10e620cc-1f69-498c-bdea-c40965e93020" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">פ</span>
+          <h2>פמפרס <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">חיתולים במחיר מיוחד</p>
+        <p class="expiry">בתוקף עד 1.12</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fpampers%3FcampaignId%3D7aea989d-168a-41bc-9e0b-80a6710ea949" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ק</span>
+          <h2>קרטרס <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">10% הנחה אקסטרה באתר</p>
+        <p class="expiry">בתוקף עד 31.12</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2Fcartersoshkosh%3FcampaignId%3D19c6fc0a-8ad2-4ea8-a999-c32e40a4784d" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="icon" aria-hidden="true">ו</span>
+          <h2>וואווא מרקט <span class="emoji" aria-hidden="true">💛</span></h2>
+        </div>
+        <p class="deal">מארז <span dir="ltr">Welcome Baby</span> ב- ₪<span dir="ltr">139</span></p>
+        <p class="expiry">בתוקף עד 31.12</p>
+        <a class="btn" href="https://partners.hi-mami.com/click?campaign_id=1&ref_id=2373&path=https%3A%2F%2Fwww.hi-mami.com%2Fbrands%2FwawaMarket%3FcampaignId%3D09f3b12b-a991-460d-b544-5169391135e5" target="_blank" rel="sponsored noopener">להטבה</a>
+      </article>
+    </section>
+
+    <section class="join">
+      <p>עוד דילים לתינוקות ולילדים מחכים לכם בקבוצת הוואטסאפ שלנו.</p>
+      <a class="cta" href="https://chat.whatsapp.com/IY0gBMj2LKF0Zn5gMYKOpA" rel="noopener" target="_blank">הצטרפו לקבוצת הדילים בוואטסאפ</a>
+    </section>
+
+    <nav aria-label="ערוצים נוספים">
+      <a href="https://www.instagram.com/ima.hosechet.deals">אינסטגרם</a>
+      <a href="https://www.facebook.com/ima.hosechet">פייסבוק</a>
+      <a href="https://t.me/ima_hosechet_deals">טלגרם</a>
+    </nav>
+
+    <footer>
+      <p>העמוד הזה הוא של אמא חוסכת, וההטבות הן במאמי.</p>
+      <p>הקישורים בעמוד הם <bdi dir="rtl">#לינק_מתגמל</bdi></p>
+    </footer>
+  </main>
+</body>
+</html>
